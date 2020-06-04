@@ -62,6 +62,8 @@
     
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);//grabs audio
 
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);//grabs key element on page
+
     if(!audio) return; //stop function from running altogether
 
     audio.currentTime = 0; //rewind to start
