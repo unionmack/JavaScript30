@@ -71,7 +71,17 @@
     audio.play();//plays audio when keydown initialized
     
     key.classList.add('playing');//adds playing class
+    
+
   })
+
+  const removeTransition = (e) => {
+    if(e.propertyName !== 'transform') return; //skip if not transform
+    console.log(e.propertyName);
+  }
+
+  const keys = document.querySelectorAll(".key");
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 </script>
 
 
