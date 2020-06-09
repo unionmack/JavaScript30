@@ -36,6 +36,7 @@
     .hl {
       color: var(--base);
     }
+
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -59,7 +60,13 @@
   </style>
 
   <script>
+    const inputs = document.querySelectorAll('.controls input');
 
+    const handleUpdate = () => {
+      console.log(this.value);
+    }
+
+    inputs
   </script>
 
 </body>
