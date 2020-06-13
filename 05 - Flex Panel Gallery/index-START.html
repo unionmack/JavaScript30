@@ -87,6 +87,7 @@
     }
 
     .panel.open {
+      flex: 5;
       font-size: 40px;
     }
 
@@ -122,6 +123,14 @@
   </div>
 
   <script>
+
+    const panels = document.querySelectorAll('.panels');
+
+    function toggleOpen() {
+      this.classList.toggle('open');
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen))
 
   </script>
 
